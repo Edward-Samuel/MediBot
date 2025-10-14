@@ -6,6 +6,7 @@ import { MessageSquare, Calendar, Stethoscope, Video, Clock, Users } from "lucid
 import ChatInterface from "@/components/ChatInterface";
 import DoctorsList from "@/components/DoctorsList";
 import AppointmentBooking from "@/components/AppointmentBooking";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   const [showChat, setShowChat] = useState(false);
@@ -58,9 +59,12 @@ const Index = () => {
             <Button variant="ghost">Services</Button>
             <Button variant="ghost">About</Button>
           </nav>
-          <Button className="gradient-primary text-white shadow-soft hover:shadow-glow transition-smooth">
-            Sign In
-          </Button>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Button className="gradient-primary text-white shadow-soft hover:shadow-glow transition-smooth">
+              Sign In
+            </Button>
+          </div>
         </div>
       </header>
 
