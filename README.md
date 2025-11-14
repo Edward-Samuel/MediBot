@@ -125,7 +125,3 @@ medibot-clinic-helper/
   - In development, confirm Vite proxy is active at `/n8n/*` and n8n runs on `:5678`
 - CORS or mixed content errors
   - Use HTTPS consistently for both the app and n8n endpoints in production
-
-## License
-
-- Specify your license terms here.
