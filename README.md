@@ -65,6 +65,9 @@ AI-powered medical assistant frontend built with React, TypeScript, Vite, Tailwi
   - Production: `webhookUrl = "http://localhost:5678/webhook/4091fa09-fb9a-4039-9411-7104d213f601/chat"`
 - Update these URLs to point to your n8n deployment in production (prefer HTTPS).
 - `createChat` is configured with `mode: "fullscreen"` and loads previous sessions.
+  
+<img width="688" height="695" alt="image" src="https://github.com/user-attachments/assets/b8c7f7f5-6cbe-4611-ae53-deaf7dd21f24" />
+
 
 ## Voice Input
 
