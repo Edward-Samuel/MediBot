@@ -66,7 +66,7 @@ AI-powered medical assistant frontend built with React, TypeScript, Vite, Tailwi
 - Update these URLs to point to your n8n deployment in production (prefer HTTPS).
 - `createChat` is configured with `mode: "fullscreen"` and loads previous sessions.
   
-<img width="688" height="695" alt="image" src="https://github.com/user-attachments/assets/b8c7f7f5-6cbe-4611-ae53-deaf7dd21f24" />
+    <img width="688" height="695" alt="image" src="https://github.com/user-attachments/assets/b8c7f7f5-6cbe-4611-ae53-deaf7dd21f24" />
 
 
 ## Voice Input
