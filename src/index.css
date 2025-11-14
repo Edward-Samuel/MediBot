@@ -2,6 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
+/* n8n chat dark-mode visibility overrides */
+.dark .n8n-chat,
+.dark .n8n-chat * {
+  color: #ffffff !important;
+}
+
+.dark .n8n-chat input,
+.dark .n8n-chat textarea {
+  background-color: #111827 !important;
+  /* slate-900 */
+  color: #ffffff !important;
+  border-color: #374151 !important;
+  /* slate-700 */
+}
+
+.dark .n8n-chat input::placeholder,
+.dark .n8n-chat textarea::placeholder {
+  color: #9ca3af !important;
+  /* slate-400 */
+}
+
+.dark .n8n-chat a {
+  color: #93c5fd !important;
+  /* blue-300 */
+}
+
+/* Ensure chat history bubbles are readable in dark mode */
+.dark .n8n-chat .n8n-chat__messages,
+.dark .n8n-chat .n8n-chat__message,
+.dark .n8n-chat .n8n-chat__message *,
+.dark .n8n-chat [class*="message"],
+.dark .n8n-chat [class*="message"] * {
+  color: #ffffff !important;
+}
+
+.dark .n8n-chat .n8n-chat__message--bot,
+.dark .n8n-chat [class*="message--bot"],
+.dark .n8n-chat [data-role="bot-message"] {
+  background-color: #1f2937 !important;
+  /* slate-800 */
+  border-color: #374151 !important;
+  /* slate-700 */
+}
+
+.dark .n8n-chat .n8n-chat__message--user,
+.dark .n8n-chat [class*="message--user"],
+.dark .n8n-chat [data-role="user-message"] {
+  background-color: #0ea5e9 !important;
+  /* sky-500 */
+  color: #ffffff !important;
+}
+
+/* Target initial message and system messages */
+.dark .n8n-chat [data-message-type="system"],
+.dark .n8n-chat [class*="system"],
+.dark .n8n-chat [class*="notice"],
+.dark .n8n-chat .n8n-chat__message--system,
+.dark .n8n-chat .n8n-chat__notice,
+.dark .n8n-chat .n8n-chat__initial-message,
+.dark .n8n-chat [class*="initial"],
+.dark .n8n-chat [class*="welcome"] {
+  background-color: #1f2937 !important;
+  /* slate-800 */
+  color: #ffffff !important;
+  border-color: #374151 !important;
+  /* slate-700 */
+}
+
+/* Force all text content to be visible */
+.dark .n8n-chat p,
+.dark .n8n-chat span,
+.dark .n8n-chat div,
+.dark .n8n-chat [class*="content"],
+.dark .n8n-chat [class*="text"] {
+  color: #ffffff !important;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -38,16 +115,16 @@ All colors MUST be HSL.
     --ring: 210 100% 45%;
 
     --radius: 0.75rem;
-    
+
     /* Medical gradients */
     --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 65%));
     --gradient-secondary: linear-gradient(135deg, hsl(158 64% 52%), hsl(158 64% 72%));
     --gradient-hero: linear-gradient(135deg, hsl(210 100% 45% / 0.05), hsl(158 64% 52% / 0.05));
-    
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -2px hsl(210 100% 45% / 0.1);
     --shadow-glow: 0 0 30px hsl(210 100% 65% / 0.2);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -98,11 +175,11 @@ All colors MUST be HSL.
     --border: 217 33% 22%;
     --input: 217 33% 22%;
     --ring: 210 100% 55%;
-    
+
     --gradient-primary: linear-gradient(135deg, hsl(210 100% 55%), hsl(210 100% 70%));
     --gradient-secondary: linear-gradient(135deg, hsl(158 64% 45%), hsl(158 64% 65%));
     --gradient-hero: linear-gradient(135deg, hsl(210 100% 55% / 0.1), hsl(158 64% 45% / 0.1));
-    
+
     --shadow-soft: 0 4px 20px -2px hsl(210 100% 55% / 0.2);
     --shadow-glow: 0 0 30px hsl(210 100% 70% / 0.3);
     --sidebar-background: 240 5.9% 10%;
@@ -124,8 +201,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 }
@@ -134,31 +216,31 @@ All colors MUST be HSL.
   .gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .gradient-secondary {
     background: var(--gradient-secondary);
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
-  
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-  
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);

@@ -22,7 +22,7 @@ const DoctorsList = ({ onSelectDoctor }: DoctorsListProps) => {
   const doctors: Doctor[] = [
     {
       id: 1,
-      name: "Dr. Sarah Johnson",
+      name: "Dr. Raju",
       specialization: "Cardiologist",
       experience: 15,
       rating: 4.9,
@@ -32,7 +32,7 @@ const DoctorsList = ({ onSelectDoctor }: DoctorsListProps) => {
     },
     {
       id: 2,
-      name: "Dr. Michael Chen",
+      name: "Dr. PB",
       specialization: "General Physician",
       experience: 12,
       rating: 4.8,
@@ -42,8 +42,8 @@ const DoctorsList = ({ onSelectDoctor }: DoctorsListProps) => {
     },
     {
       id: 3,
-      name: "Dr. Emily Brown",
-      specialization: "Dermatologist",
+      name: "Dr. Sam",
+      specialization: "Orthopedic Surgeon",
       experience: 10,
       rating: 4.7,
       avatar: "👩‍⚕️",
@@ -52,13 +52,23 @@ const DoctorsList = ({ onSelectDoctor }: DoctorsListProps) => {
     },
     {
       id: 4,
-      name: "Dr. James Wilson",
-      specialization: "Pediatrician",
+      name: "Dr. Sanju",
+      specialization: "Dermatologist",
       experience: 18,
       rating: 5.0,
       avatar: "👨‍⚕️",
       availability: "Available Today",
       consultationFee: 130
+    },
+    {
+      id: 5,
+      name: "Dr. Meera",
+      specialization: "Pediatrician",
+      experience: 10,
+      rating: 4.5,
+      avatar: "👨‍⚕️",
+      availability: "Available Today",
+      consultationFee: 100
     }
   ];
 
